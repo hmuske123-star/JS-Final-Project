@@ -196,7 +196,7 @@ nav {
 }
 
 a.nav__link[data-v-48b363cf] {
-    color: darkgreen!important;
+    color: darkgreen;
     text-align: center;
     font-size: 30px;
     margin-bottom: 60px
@@ -213,6 +213,11 @@ a.link[data-v-48b363cf]:hover {
     padding: 16px 0
 }
 
+.nav__link[data-v-48b363cf]:hover {
+    color: darkseagreen;
+    transition: all 300ms ease;
+}
+
 .close-btn[data-v-48b363cf] {
     pointer-events: none;
     position: absolute;
@@ -220,7 +225,7 @@ a.link[data-v-48b363cf]:hover {
     left: 0;
     width: 37px;
     height: 37px;
-    background-color: transparent;
+    background-color: transparent; 
     z-index: 2000;
     cursor: pointer;
 }
@@ -237,7 +242,7 @@ a.link[data-v-48b363cf]:hover {
     width: 0;
     top: 50%;
     left: 50%;
-    background-color: #6030b1
+    background-color: darkgreen;
 }
 
 .close-btn[data-v-48b363cf]:before {
@@ -279,7 +284,7 @@ span[data-v-48b363cf] {
 }
 
 .show-sm[data-v-48b363cf] {
-    color: #6030b1;
+    color: darkgreen;
     font-size: 12px;
     letter-spacing: 4px;
     transition: all .25s ease;

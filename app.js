@@ -3,9 +3,9 @@
 */
 
 function openMenu() {
-   document.body.classList += ("menu--open");
+   document.querySelector(".showMenu").classList.add("active");
 }
 
 function closeMenu() {
-   document.body.classList.remove("menu--open");
+   document.querySelector(".showMenu").classList.remove("active");
 }
