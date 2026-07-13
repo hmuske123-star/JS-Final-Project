@@ -4,8 +4,10 @@
 
 function openMenu() {
    document.querySelector(".showMenu").classList.add("active");
+   document.querySelector(".close-btn").classList.add("show");
 }
 
 function closeMenu() {
    document.querySelector(".showMenu").classList.remove("active");
+   document.querySelector(".close-btn").classList.remove("show");
 }
