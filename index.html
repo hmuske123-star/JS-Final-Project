@@ -32,7 +32,7 @@
                         ">Contact</a></li>
                 </ul>
             </nav>
-            <div data-v-48b363cf id="phone__nav">
+            <div data-v-48b363cf id="phone__nav" onclick="openMenu()">
                 <div data-v-48b363cf class="bento__menu show__anim--in">
                     <div data-v-48b363cf></div>
                     <div data-v-48b363cf></div>
@@ -47,9 +47,9 @@
             </div>
             <div data-v-48b363cf class="close-btn"></div>
             <div data-v-48b363cf class="showMenu">
-                <a data-v-48b363cf href="#" class="nav__link router__link--exact-active router__link--active click">Home</a>
-                <a data-v-48b363cf href="/browse" class="nav__link click">Browse Art</a>
-                <a data-v-48b363cf href="#" class="nav__link router__link--active router__link--exact-active click">Contact</a>
+                <a data-v-48b363cf href="#" class="nav__link router__link--exact-active router__link--active click" onclick="closeMenu()">Home</a>
+                <a data-v-48b363cf href="/browse" class="nav__link click" onclick="closeMenu()">Browse Art</a>
+                <a data-v-48b363cf href="#" class="nav__link router__link--active router__link--exact-active click" onclick="closeMenu()">Contact</a>
             </div>
         </section>
     </div>
