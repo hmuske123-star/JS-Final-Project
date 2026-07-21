@@ -250,6 +250,47 @@ h2 .black-text[data-v-66aecfa2] {
     width: 70%;
 }
 
+.el-slider__bar {
+    height: 6px;
+    background-color: darkgreen;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: absolute;
+}
+
+.el-slider__runway {
+    width: 100%;
+    height: 6px;
+    margin: 16px 0;
+    background-color: white;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.el-slider__button-wrapper {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    z-index: 1001;
+    top: -7px;
+    transform: translateX(-5%);
+    background-color: transparent;
+    text-align: center;
+    line-height: normal;
+}
+
+.el-slider__button {
+    width: 16px;
+    height: 16px;
+    border: 2px solid darkgreen;
+    background-color: white;
+    border-radius: 50%;
+    transition: .2s;
+
+}
+
 #artists {
     padding-top: 40px;
 }
@@ -361,6 +402,10 @@ h2[data-v-ca62299c] {
     color: darkgreen;
     margin-bottom: 24px;
     display: -webkit-box !important;
+}
+
+#filter {
+    margin-top: 30px;
 }
 
 /*.car-info[data-v-ca62299c] {
