@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Art</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="browse.css">
+    <script src="https://kit.fontawesome.com/6f87a90b8e.js" crossorigin="anonymous"></script>
+    <script src="browse.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <section id="header__browse">
+            <div class="header__container">
+                <div class="nav__container">
+                    <nav>
+                        <figure>
+                            <img id="logo__browse" src="/JS Final Project Assets/Black and White Minimalist Art Studio Logo White.png" alt="logo">
+                        </figure>
+                        <ul class="nav__link--list">
+                            <li class="nav__link click">
+                                <a href="/index.html" class="
+                                nav__link--anchor
+                                nav__link--browse
+                                link__hover-effect
+                                ">Home</a></li>
+                            <li class="nav__link click">
+                                <a href="/browse.html" class="
+                                nav__link--anchor
+                                nav__link--browse
+                                link__hover-effect
+                                ">Browse Art</a></li>
+                            <li class="nav__link click">
+                                <a class="
+                                btn__contact
+                                nav__link--browse
+                                nav__link--anchor
+                                ">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div data-v-48b363cf id="phone__nav" onclick="openMenu()">
+                        <div data-v-48b363cf class="bento__menu bento__menu--browse show__anim--in">
+                            <div data-v-48b363cf></div>
+                            <div data-v-48b363cf></div>
+                            <div data-v-48b363cf></div>
+                            <div data-v-48b363cf></div>
+                            <div data-v-48b363cf></div>
+                            <div data-v-48b363cf></div>
+                            <div data-v-48b363cf></div>
+                            <div data-v-48b363cf></div>
+                            <div data-v-48b363cf></div>
+                        </div>
+                    </div>
+                    <div data-v-48b363cf class="close-btn click" onclick="closeMenu()"></div>
+                    <div data-v-48b363cf class="showMenu">
+                        <a data-v-48b363cf href="/index.html" class="nav__link router__link--exact-active router__link--active click" onclick="closeMenu()">Home</a>
+                        <a data-v-48b363cf href="/browse.html" class="nav__link click" onclick="closeMenu()">Browse Art</a>
+                        <a data-v-48b363cf href="#" class="nav__link router__link--active router__link--exact-active click" onclick="closeMenu()">Contact</a>
+                    </div>
+                </div>
+                <div class="browse__header--wrapper">
+                    <h1 class="browse__header">Browse the Archive</h1>
+                    <div class="input__wrapper">
+                        <input type="text" placeholder="Search by Medium, Masterwork, Period or Artist" fdprocessedid="y12d8">
+                        <div class="search__wrapper">
+                            <svg data-v-390ceb07 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.or/2000/svg" viewbox="0 0 512 512" class="svg__inline--fa fa__search fa-w-16">
+                                <path data-v-390ceb07="" fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div data-v-390ceb07 class="overlay"></div>
+            </div>
+        </section>
+        <section id="browse">
+            <div class="md__progress-bar md__indeterminate md__theme--default" style="position: absolute; top:0px; left: 0px; right: 0px;">
+                <div class="md__progress-bar--track"></div>
+                <div class="md__progress-bar--fill"></div>
+                <div class="md__progress-bar--buffer"></div>
+            </div>
+            <div data-v-66aecfa2 data-v-040c1d60 id="filter" class="content-wrapper justify-between">
+                <h1 data-v-66aecfa2 class="search-info">
+                    <span data-v-66aecfa2 class="black__text">Search results for</span>
+                </h1>
+                <div data-v-66aecfa2 class="price-filter flex flex-col">
+                    <h2 data-v-66aecfa2 class="search-info">
+                        <span data-v-66aecfa2 class="black__text--subtitle" style="margin-right: 8px;">Artists:</span>
+                        "A to Z"
+                    </h2>
+                    <div data-v-66aecfa2 class="slider-wrapper">
+                        <div data-v-66aecfa2 role="slider" aria-valuemin="0" aria-valuemax="100000" aria-orientation="horizontal"
+                        class="el-slider" aria-valuetext="A-Z" aria-label="slider between A and Z"></div>
+                        <div class="el-slider__runway">
+                            <div class="el-slider__bar" style="width: 100%; left: 0%;"></div>
+                            <div tabindex="A" class="el-slider__button-wrapper" style="left: 0%;">
+                                <div class="el-tooltip el-slider__button" aria-describedby="el-tooltip-9905" tabindex="0"></div>
+                            </div>
+                            <div tabindex="A" class="el-slider__button-wrapper" style="left: 100%;">
+                                <div class="el-tooltip el-slider__button" aria-describedby="el-tooltip-9734" tabindex="0"></div>
+                            </div>
+                            <div>
+                                <div class="el-slider__stop el-slider__marks-stop" style="left: 0%;"></div>
+                                <div class="el-slider__stop el-slider__marks-stop" style="left: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-ca62299c data-v-040c1d60 id="artists">
+                <div data-v-ca62299c class="content-wrapper">
+                    <div data-v-ca62299c class="loading__state">
+                        <svg data-v-cf78a876 data-v-ca62299c aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-spinner fa-w-16" style="font-size: 30px; color: darkgreen;"><path data-v-cf78a876="" fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z" class=""></path></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
