@@ -488,6 +488,8 @@ input {
     border: 1px solid #0a1f44;
     color:#0a1f44;
     display: inline-block;
+    justify-content: center;
+    align-items: center;
     height: 70px;
     line-height: 40px;
     outline: none;
