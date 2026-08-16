@@ -74,9 +74,6 @@ h1.browse__header {
 .search__wrapper[data-v-390ceb07] {
     position: absolute;
     cursor: pointer;
-    align-items: center !important;
-    justify-content: center !important;
-    top: 0px;
     right: 0px;
     z-index: 10000;
     padding: 0px 20px 0px 8px;
