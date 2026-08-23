@@ -1,5 +1,5 @@
 /* Harvard Art Museums API Key:
-   0705d3ec-7bc9-4cc0-bd62-2302fbd3f04
+   0705d3ec-7bc9-4cc0-bd62-23302fbd3f04
 */
 
 function openMenu() {
@@ -11,3 +11,11 @@ function closeMenu() {
    document.querySelector(".showMenu").classList.remove("active");
    document.querySelector(".close-btn").classList.remove("show");
 }
+
+async function fetchData() {
+   const images = await fetch("https://api.harvardartmuseums.org/image?apikey=0705d3ec-7bc9-4cc0-bd62-23302fbd3f04");
+   const imageData = await images.json();
+   console.log(imageData);
+}
+
+fetchData();

@@ -226,11 +226,9 @@ h2[data-v-66aecfa2] {
 
 .search__wrapper {
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    bottom: 0;
+    cursor: pointer; 
     right: 0;
-    z-index: 10000;
+    z-index: 1000;
     padding: 0 20px 0 8px;
     color: darkgreen;
     font-size: 32px;
@@ -873,7 +871,7 @@ h2[data-v-ca62299c] {
 }
 
 .title[data-v-ca62299c] {
-    -webkit-line-clamp: 1;
+    /*-webkit-line-clamp: 1;*/
     -webkit-box-orient: vertical;
     overflow: hidden;
     white-space: normal;
@@ -973,10 +971,6 @@ h2[data-v-ca62299c] {
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
-}
-
-.search__wrapper[data-v-390ceb07] {
-
 }
 
 
