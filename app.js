@@ -14,11 +14,27 @@ function closeMenu() {
 
 const artworksWrapper = document.querySelector(".artworks");
 
+async function searchArtworks(query) {
+        const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${query}`);
+        const data = await response.json();
+        console.log(data);
+    }
+
+
+function onSearchChange(event) {
+   console.log(event.target.value);
+   searchArtworks(event.target.value);
+}
+
+
+/* AIC API
+
 async function fetchArtworks(searchTerm) {
    const artworks = await fetch(
   `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}&fields=id,title,artist_title,artwork_type_title,department_title,date_display,image_id`);
    const data = await artworks.json();
    console.log(data);
+   console.log(data.data.map(artworks => artworks.image_id));
    artworksWrapper.innerHTML = data.data.map((artworks) => {
       return `<div class='images'>
       <img src="${data.config.iiif_url}/${artworks.image_id}/full/843,/0/default.jpg">
@@ -30,10 +46,4 @@ async function fetchArtworks(searchTerm) {
       <button>Learn More</button>
       </div>`;
    }).join('');
-}
-
-
-function onSearchChange(event) {
-   console.log(event.target.value);
-   fetchArtworks(event.target.value);
-}
+}*/
