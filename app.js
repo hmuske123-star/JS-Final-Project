@@ -149,23 +149,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-/* AIC API
-
-async function fetchArtworks(searchTerm) {
-   const artworks = await fetch(
-  `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}&fields=id,title,artist_title,artwork_type_title,department_title,date_display,image_id`);
-   const data = await artworks.json();
-   console.log(data);
-   console.log(data.data.map(artworks => artworks.image_id));
-   artworksWrapper.innerHTML = data.data.map((artworks) => {
-      return `<div class='images'>
-      <img src="${data.config.iiif_url}/${artworks.image_id}/full/843,/0/default.jpg">
-      <h2>${artworks.title}</h2>
-      <h4>${artworks.artist_title}</h4>
-      <h4>${artworks.artwork_type_title}</h4>
-      <h4>${artworks.department_title}</h4>
-      <h4>${artworks.date_display}</h4>
-      <button>Learn More</button>
-      </div>`;
-   }).join('');
-}*/
