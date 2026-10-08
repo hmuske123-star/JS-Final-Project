@@ -215,7 +215,10 @@ a.nav__link[data-v-48b363cf] {
     color: darkgreen;
     text-align: center;
     font-size: 30px;
-    margin-bottom: 60px
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a.link[data-v-48b363cf]:hover {
@@ -294,6 +297,9 @@ a.link[data-v-48b363cf]:hover {
     transition: all .4s ease;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
 }
 
 span[data-v-48b363cf] {

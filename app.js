@@ -1,7 +1,3 @@
-/* Harvard Art Museums API Key:
-   0705d3ec-7bc9-4cc0-bd62-23302fbd3f04
-*/
-
 function openMenu() {
   document.querySelector(".showMenu").classList.add("active");
   document.querySelector(".close-btn").classList.add("show");
@@ -14,6 +10,19 @@ function closeMenu() {
 
 const artworksWrapper = document.querySelector(".artworks");
 
+function setSearchLoading(isLoading) {
+  const progressBar = document.querySelector(".md__progress-bar");
+  const loadingState = document.querySelector(".loading__state");
+
+  if (progressBar) {
+    progressBar.style.display = isLoading ? "block" : "none";
+  }
+
+  if (loadingState) {
+    loadingState.style.display = isLoading ? "flex" : "none";
+  }
+}
+
 async function searchArtworks(query) {
   if (!artworksWrapper) {
     console.log(artworksWrapper);
@@ -24,15 +33,17 @@ async function searchArtworks(query) {
 
   if (!searchTerm) {
     artworksWrapper.innerHTML = "";
+    setSearchLoading(false);
     return;
   }
 
+  setSearchLoading(true);
   artworksWrapper.innerHTML =
     "<p class='search-status'>Loading artworks...</p>";
 
   try {
     const response = await fetch(
-      `https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=${encodeURIComponent(searchTerm)}`,
+      `https://collectionapi.metmuseum.org/public/collection/v1.1/search?hasImages=true&q=${encodeURIComponent(searchTerm)}`,
     );
     if (!response.ok) {
       throw new Error("The search request failed.");
@@ -55,6 +66,7 @@ async function searchArtworks(query) {
 
     if (!artworks.length) {
       artworksWrapper.innerHTML = `<p class='search-status'>No artworks found for "${escapeHtml(searchTerm)}".</p>`;
+      setSearchLoading(false);
       return;
     }
 
@@ -77,6 +89,8 @@ async function searchArtworks(query) {
     artworksWrapper.innerHTML =
       "<p class='search-status'>Unable to load artworks. Please try again.</p>";
     console.error(error);
+  } finally {
+    setSearchLoading(false);
   }
 }
 
